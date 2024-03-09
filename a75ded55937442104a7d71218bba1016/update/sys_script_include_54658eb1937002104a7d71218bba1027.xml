@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1330072_lms.lmsAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>lmsAjax</name>
+        <script><![CDATA[var lmsAjax = Class.create();
+lmsAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getDatediff: function() {
+        var d1 = new GlideDate();
+        d1.setDisplayValue(this.getParameter('sysparm_start'));
+        var d2 = new GlideDate();
+        d2.setDisplayValue(this.getParameter('sysparm_end'));
+        var duration = GlideDateTime.subtract(d1, d2); // Use GlideDateTime for date time subtraction
+        return duration.getNumericValue(); // This returns the duration in milliseconds
+    },
+	
+	getLeaveBucket : function(){
+		var gr = new GlideRecord('x_1330072_lms_leave_bucket');
+		gr.addQuery('employee',this.getParameter('sysparm_user'));
+		gr.addQuery('leave_type',this.getParameter('sysparm_leavetype'));
+		gr.query();
+		if(gr.next()){
+			var leavedetails ={};
+			leavedetails.accured = '' + gr.accured;
+			leavedetails.balance = '' + gr.balance;
+			leavedetails.taken = '' + gr.taken
+			return JSON.stringify(leavedetails);
+		}
+		
+	},
+    type: 'lmsAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-08 07:39:45</sys_created_on>
+        <sys_id>54658eb1937002104a7d71218bba1027</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>lmsAjax</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1330072_lms">a75ded55937442104a7d71218bba1016</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Leave Management System">a75ded55937442104a7d71218bba1016</sys_scope>
+        <sys_update_name>sys_script_include_54658eb1937002104a7d71218bba1027</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-08 11:10:31</sys_updated_on>
+    </sys_script_include>
+</record_update>

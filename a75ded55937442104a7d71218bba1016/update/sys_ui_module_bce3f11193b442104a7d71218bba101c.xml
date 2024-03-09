@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Leave Management System">f0e3f11193b442104a7d71218bba100d</application>
+        <filter/>
+        <name>Leave Buckets</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1330072_lms.leave_bucket_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-06 16:53:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bce3f11193b442104a7d71218bba101c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Buckets</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1330072_lms">a75ded55937442104a7d71218bba1016</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">a75ded55937442104a7d71218bba1016</sys_scope>
+        <sys_update_name>sys_ui_module_bce3f11193b442104a7d71218bba101c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-06 16:53:30</sys_updated_on>
+        <table>x_1330072_lms_leave_bucket</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>
